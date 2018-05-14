@@ -4,7 +4,7 @@ frameRate(24);
 var ratio = (PI/180);
 
 // helps give more advanced input
-var debug = false;
+var debug = true;
 var keys = []; // while key presses
 var rkey = []; // when key releases
 var pkey = []; // when key is first pressed
@@ -801,7 +801,7 @@ person.prototype.swing = function() {
 	if (this.t===3) {
 		swordrotate*=-1;
 	}
-	if (pkey[SHIFT]===2&&this.actionable === true) {
+	if (pkey[CONTROL]===2&&this.actionable === true) {
 		this.rolling = 12;
 		this.framenum = 0;
 	}
