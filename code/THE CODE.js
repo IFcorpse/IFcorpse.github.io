@@ -4,7 +4,7 @@ frameRate(24);
 var ratio = (PI/180);
 
 // helps give more advanced input
-var debug = true;
+var debug = false;
 var keys = []; // while key presses
 var rkey = []; // when key releases
 var pkey = []; // when key is first pressed
