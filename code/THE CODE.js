@@ -520,7 +520,7 @@ var w = 5;
 	
 	if (this.z<=0) {
 		if (this.actionable===true) {
-    if (keys[83]===true) { // down
+    if (keys[83]===true||keys[40]===true) { // down
         this.t = 0;
 		
         this.y+=5;
@@ -528,18 +528,18 @@ var w = 5;
         
         a+=1;
     }
-    if (keys[87]===true) { // up
+    if (keys[87]===true||keys[38]===true) { // up
         this.t = 2;
 
         this.y-=5;
         a+=1;
     }
-    if (keys[65]===true) {  // left
+    if (keys[65]===true||keys[37]===true) {  // left
         this.t = 1;
         this.x-=5;
         a+=1;
     }
-    if (keys[68]===true) { // right
+    if (keys[68]===true||keys[39]===true) { // right
         this.t = 3;
         this.x+=5;
         a+=1;
@@ -565,7 +565,7 @@ var w = 5;
 		noStroke();
 
        if (this.t<1) {
-        if (keys[83]===true) {
+        if (keys[83]===true||keys[40]===true) {
 			this.currentAnim = playerFrontWalk;
 			this.frameSpeed = 1;
 		} else {
@@ -573,7 +573,7 @@ var w = 5;
 			this.frameSpeed = 2;
 		}
     } else if (this.t<2) {
-        if (keys[65]===true) { // left
+        if (keys[65]===true||keys[37]===true) { // left
 			this.currentAnim = playerSideWalk;
 			this.frameSpeed = 1;
 		} else {
@@ -582,7 +582,7 @@ var w = 5;
 		}
     
     } else if (this.t<3) {
-        if (keys[87]===true) {
+        if (keys[87]===true||keys[38]===true) {
 			this.currentAnim = playerBackWalk;
 			this.frameSpeed = 1;
 		} else {
@@ -592,7 +592,7 @@ var w = 5;
 		
 		
     }  else if (this.t<4) { //right
-		if (keys[68]===true) {
+		if (keys[68]===true||keys[39]===true) {
 			this.currentAnim = playerSideWalk;
 			this.frameSpeed = 1;
 		} else {
@@ -801,7 +801,7 @@ person.prototype.swing = function() {
 	if (this.t===3) {
 		swordrotate*=-1;
 	}
-	if (pkey[CONTROL]===2&&this.actionable === true) {
+	if (pkey[10]===2&&this.actionable === true) {
 		this.rolling = 12;
 		this.framenum = 0;
 	}
